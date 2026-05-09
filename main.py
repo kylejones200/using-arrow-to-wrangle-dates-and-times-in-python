@@ -26,9 +26,9 @@ def main():
     
     config = load_config(args.config)
     
-        results = demonstrate_arrow_operations()
+    results = demonstrate_arrow_operations()
     
-        logging.info(f"Current UTC: {results['current_utc']}")
+    logging.info(f"Current UTC: {results['current_utc']}")
     logging.info(f"2 hours ago: {results['two_hours_ago']}")
     logging.info(f"Next week: {results['next_week']}")
     logging.info(f"US Central Time: {results['us_central']}")
@@ -38,13 +38,13 @@ def main():
     logging.info(f"Rounded (floor hour): {results['rounded']}")
     logging.info(f"Interval Duration: {results['interval_hours']:.2f} hours")
     
-        times = [results['current_utc'].shift(days=-i) for i in range(5)]
+    times = [results['current_utc'].shift(days=-i) for i in range(5)]
     df = create_time_series_dataframe(times)
     logging.info(df)
     
     if __name__ == "__main__":
-    from src.core import create_time_series_dataframe
+        from src.core import create_time_series_dataframe
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-    main()
+main()
 
