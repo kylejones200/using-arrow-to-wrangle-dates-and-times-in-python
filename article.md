@@ -11,7 +11,7 @@ Arrow simplifies the complex and tedious task of handling dates and times in Pyt
 
 ### Using Arrow to wrangle dates and times in Python
 #### Arrow simplifies the complex and tedious task of handling dates and times in Python by providing intuitive methods for creating, manipulating, and formatting time series data.
-Raw data never has pristine dates and times. And fixing this with Pandas in a pain. **Arrow** simplifies handling, manipulating, and formatting dates and times. RIP `datetime.datetime.now()`.
+Raw data never has pristine dates and times. And fixing this with Pandas in a pain. Arrow simplifies handling, manipulating, and formatting dates and times. RIP `datetime.datetime.now()`.
 
 Arrow improves Python\'s date and time handling by making it easy to create, manipulate, and format dates and times. It lets up change time zones and talk about time in a relative way, like "2 hours ago".
 
@@ -49,7 +49,7 @@ Arrow lets you talk about time like a human and not in [Unix epoch time](https:/
 Arrow makes it easy to parse and convert date strings.
 
 #### Arrow and Pandas
-Arrow integrates seamlessly with **Pandas** for working with time series data.
+Arrow integrates seamlessly with Pandas for working with time series data.
 
 #### Time Zone Conversion in DataFrames
 

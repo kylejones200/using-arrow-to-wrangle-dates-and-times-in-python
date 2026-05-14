@@ -33,12 +33,12 @@ Edit `config.yaml` to customize:
 ## Arrow Features
 
 Arrow provides intuitive date/time operations:
-- **Time Shifting**: Add/subtract time periods
-- **Timezone Conversion**: Convert between timezones
-- **Humanization**: Natural language time descriptions
-- **Parsing**: Parse various date/time formats
-- **Rounding**: Round to specified precision
-- **Intervals**: Calculate time differences
+- Time Shifting: Add/subtract time periods
+- Timezone Conversion: Convert between timezones
+- Humanization: Natural language time descriptions
+- Parsing: Parse various date/time formats
+- Rounding: Round to specified precision
+- Intervals: Calculate time differences
 
 ## Caveats
 
