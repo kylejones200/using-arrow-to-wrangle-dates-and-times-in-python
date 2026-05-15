@@ -2,8 +2,6 @@
 
 import arrow
 import pandas as pd
-from pathlib import Path
-from typing import Dict, List
 import logging
 
 # Configure logging
@@ -41,11 +39,11 @@ def calculate_interval(start: arrow.Arrow, end: arrow.Arrow) -> float:
     """Calculate time interval in hours."""
     return (end - start).total_seconds() / 3600
 
-def create_time_series_dataframe(times: List[arrow.Arrow]) -> pd.DataFrame:
+def create_time_series_dataframe(times: list[arrow.Arrow]) -> pd.DataFrame:
     """Create pandas DataFrame from Arrow time objects."""
     return pd.DataFrame({'timestamp': [t.datetime for t in times]})
 
-def demonstrate_arrow_operations() -> Dict[str, any]:
+def demonstrate_arrow_operations() -> dict[str, any]:
     """Demonstrate various Arrow operations."""
     now = get_current_time()
     

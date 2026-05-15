@@ -16,7 +16,7 @@ def load_config(config_path: Path = None) -> dict:
     if config_path is None:
         config_path = Path(__file__).parent / 'config.yaml'
     
-    with open(config_path, 'r') as f:
+    with open(config_path) as f:
         return yaml.safe_load(f)
 
 def main():
@@ -24,7 +24,7 @@ def main():
     parser.add_argument('--config', type=Path, default=None, help='Path to config file')
     args = parser.parse_args()
     
-    config = load_config(args.config)
+    load_config(args.config)
     
     results = demonstrate_arrow_operations()
     
@@ -43,7 +43,7 @@ def main():
     logging.info(df)
     
     if __name__ == "__main__":
-        from src.core import create_time_series_dataframe
+        pass
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 main()
