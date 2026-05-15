@@ -6,28 +6,31 @@ Main entry point for demonstrating Arrow date/time operations.
 """
 
 import argparse
-import yaml
 import logging
 from pathlib import Path
+
+import yaml
 from src.core import demonstrate_arrow_operations
+
 
 def load_config(config_path: Path = None) -> dict:
     """Load configuration from YAML file."""
     if config_path is None:
-        config_path = Path(__file__).parent / 'config.yaml'
-    
+        config_path = Path(__file__).parent / "config.yaml"
+
     with open(config_path) as f:
         return yaml.safe_load(f)
 
+
 def main():
-    parser = argparse.ArgumentParser(description='Arrow Date/Time Wrangling')
-    parser.add_argument('--config', type=Path, default=None, help='Path to config file')
+    parser = argparse.ArgumentParser(description="Arrow Date/Time Wrangling")
+    parser.add_argument("--config", type=Path, default=None, help="Path to config file")
     args = parser.parse_args()
-    
+
     load_config(args.config)
-    
+
     results = demonstrate_arrow_operations()
-    
+
     logging.info(f"Current UTC: {results['current_utc']}")
     logging.info(f"2 hours ago: {results['two_hours_ago']}")
     logging.info(f"Next week: {results['next_week']}")
@@ -37,14 +40,16 @@ def main():
     logging.info(f"Parsed Time: {results['parsed']}")
     logging.info(f"Rounded (floor hour): {results['rounded']}")
     logging.info(f"Interval Duration: {results['interval_hours']:.2f} hours")
-    
-    times = [results['current_utc'].shift(days=-i) for i in range(5)]
+
+    times = [results["current_utc"].shift(days=-i) for i in range(5)]
     df = create_time_series_dataframe(times)
     logging.info(df)
-    
+
     if __name__ == "__main__":
         pass
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-main()
 
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
+main()
