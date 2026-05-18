@@ -2,6 +2,14 @@
 
 This project demonstrates date and time manipulation using the Arrow library.
 
+## Business context
+
+Arrow simplifies the complex and tedious task of handling dates and times in Python by providing intuitive methods for creating...
+
+Raw data never has pristine dates and times. And fixing this with Pandas in a pain. Arrow simplifies handling, manipulating, and formatting dates and times. RIP `datetime.datetime.now()`.
+
+Arrow improves Python's date and time handling by making it easy to create, manipulate, and format dates and times. It lets up change time zones and talk about time in a relative way, like "2 hours ago".
+
 ## Article
 
 Medium article: [Using Arrow to Wrangle Dates and Times in Python](https://medium.com/@kylejones_47003/using-arrow-to-wrangle-dates-and-times-in-python-05f2e08de508)
