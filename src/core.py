@@ -1,6 +1,5 @@
 """Core functions for date and time wrangling with Arrow."""
 from typing import Any
-
 import arrow
 import pandas as pd
 
